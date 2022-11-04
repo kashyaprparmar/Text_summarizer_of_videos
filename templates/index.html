@@ -1,0 +1,122 @@
+<!--
+Developed by: Soham Bhatt (SM21MTECH14004)
+ !-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DL Project</title>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static',filename='styles/styles.css')}}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <center><a class="navbar-brand" href="/">Video to Text Summarization</a></center>
+            </div>
+        </nav>
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <h2 class="masthead-heading text-uppercase mb-0">About Project</h2>
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <p class="masthead-subheading font-weight-light mb-0">
+                    We are generating textual summarization of the videographic content. Here we are working with educational videos only where the speaker is speaking something. From his/her speech, we are extracting the sentences by using the NLP model followed by summarization of the sentences by using Deep Learning models. For that you need to pass a youtube link of the video in the input box below. We will generate a summary of the video in the form of text.  
+                </p>
+            </div>
+        </header>
+        <section class="page-section" id="contact">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Input Here</h2>
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        <form id="contactForm" action="/video" method="post">
+                            <div class="form-floating mb-3">
+                                
+                                <input class="form-control" id="url" name="url" type="text" placeholder="Video URL" data-sb-validations="required" required />
+                                <br><br>
+                                <label for="url">Video URL</label><br>
+                                
+                                <div class="raw">
+                                    <center>
+                                    <div class="col-md-6">
+                                    <select class="form-control" name="method" id="method">
+                                        <option value="extractive">Extractive</option>
+                                        <option value="abstractive">Abstractive</option>
+                                    </select><br>
+                                    </div>
+                                    </center>
+                                </div>
+                                <div class="raw">
+                                    <center>
+                                    <div class="col-md-6">
+                                    <select class="form-control" name="per" id="per" >
+                                        <option value="20">20%</option>
+                                        <option value="40">40%</option>
+                                        <option value="60">60%</option>
+                                        <option value="80">80%</option>
+                                    </select>
+                                    </div>
+                                    </center>
+                                </div>
+                            </div>
+                            <center>
+                            <input class="btn btn-primary btn-xl" id="submitButton" form="contactForm" value="Submit" type=submit></input>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-white">About The Team</h2>
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <CENTER>
+                <div class="row">
+                    <div class="col-lg-4 ms-auto"><p class="lead">SOHAM BHATT<br> SM21MTECH14004</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">KASHYAP PARMAR<br>AI21MTECH14006</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">YOGESH AHIRWAR<br> CS21MTECH11015 </p></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ms-auto"><p class="lead">DARSHAN DOBARIYA<br> AI21MTECH14008</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">BHAVYA KANZARIYA<br>AI21MTECH11002</p></div>
+                </div>
+                </CENTER>
+            </div>
+        </section>
+        
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <center>
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Github Repository</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/sohamiith/DL_project/tree/master" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    </center>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; IIT Hyderabad</small></div>
+        </div>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

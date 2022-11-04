@@ -1,0 +1,6 @@
+transformers
+flask
+pytube
+pytorch
+SpeechRecognition
+pydub
